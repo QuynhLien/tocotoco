@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'db4free.net',
 	'username' => 'quynhlien',
 	'password' => 'classtmdt',
 	'database' => 'tocotoco',
