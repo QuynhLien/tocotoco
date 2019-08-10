@@ -26,6 +26,7 @@ class GioHang extends CI_Controller
         if($session) {
         	// print_r($session);
         	$i = 0;
+            $template['data'] = [];
         	foreach ($session as $key => $value) {
         		if(substr_count($key,"cart_")) {
         			$id = trim($key,"cart_");

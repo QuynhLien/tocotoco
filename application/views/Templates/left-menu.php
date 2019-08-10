@@ -71,7 +71,7 @@
                       if ($value->slug == $type) $active = "active";
                   ?>  
                   <li class="li <?= $active ?>">
-                    <a class="li1" href="<?php echo site_url().'SanPham/index/'.$value->slug; ?>"><?= $value->name_type ?></a>
+                    <a class="li1" href="<?= site_url('san-pham/che'); ?>"><?= $value->name_type ?></a>
                   </li>
                   <?php } ?>
                 </ul>

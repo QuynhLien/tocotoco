@@ -8,9 +8,8 @@
 				<h3>Giỏ hàng</h3>
 			</div>
 			<div class="row">
-                <a href="<?= site_url('san-pham/che')?>" id="continous">Tiếp tục mua hàng >></a><br><br><br>
 				<?php if ($data) { ?>
-					<!-- <form method="POST" id="form-pay" style="width: -webkit-fill-available;"> -->
+                    <a href="<?= site_url('san-pham/che')?>" id="continous">Tiếp tục mua hàng >></a><br><br><br>
 					<table class="table">
 						<tbody>
 						<?php
@@ -74,8 +73,6 @@
 							<a class="btn-pay" data-toggle="modal" data-target="#payModal" onclick="confrim_pay()">Thanh toán</a><br><br>
 						</div>
 					</div>
-					<!-- </form> -->
-
                 </div>
 				<?php } else { ?>
 					<p>Giỏ hàng trống</p>

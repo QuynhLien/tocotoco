@@ -506,10 +506,11 @@
 			<div class="col-lg-4 col-sm-4">
 				<h4 class="mb-4" style="color:  #d3b673;">Subscribe Us</h4>
 				<p class="mb-3" style="color: whitesmoke">Subscribe to our newsletter</p>
-				<form action="#" method="post" class="d-flex">
-					<input type="email" id="email" name="EMAIL" placeholder="Enter your email here" required="">
+				<form action="home/addSubcribe" method="post" class="d-flex">
+					<input type="email" id="email" name="email_sub" placeholder="Enter your email here" required="">
 					<button type="submit" class="btn">Subscribe</button>
 				</form>
+				<!-- <a href="<?= site_url('home/createXLS')?>" class="btn">Export</a> -->
 			</div>
 		</div>
 	</div>
