@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="eng">
 
 <head>
 	<title>Tocotoco - Trang chủ</title>
@@ -24,12 +24,15 @@
 	<link rel="stylesheet" href="<?php echo site_url(); ?>template/css/slider.css" type="text/css" media="all"/>
 	<!-- Style-CSS -->
 
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- //jquery -->
+
 	<!-- /Fonts -->
 	<link href="<?php echo site_url(); ?>template/css/font-awesome.css" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-		  rel="stylesheet">
-	<link type="text/css" rel="stylesheet"
-		  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans">
 	<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Baloo&subset=vietnamese" rel="stylesheet">
 	<!-- //Fonts -->
@@ -506,9 +509,9 @@
 			<div class="col-lg-4 col-sm-4">
 				<h4 class="mb-4" style="color:  #d3b673;">Subscribe Us</h4>
 				<p class="mb-3" style="color: whitesmoke">Subscribe to our newsletter</p>
-				<form action="home/addSubcribe" method="post" class="d-flex">
+				<form id="sub_form" class="d-flex">
 					<input type="email" id="email" name="email_sub" placeholder="Enter your email here" required="">
-					<button type="submit" class="btn">Subscribe</button>
+					<button type="submit" class="btn popup_sub">Subscribe<span class="popuptext1" id="myPopup1">Đăng ký nhận tin thành công!</span><span class="popuptext2" id="myPopup2">Email này đã đăng ký nhận tin!</span></button>
 				</form>
 				<!-- <a href="<?= site_url('home/createXLS')?>" class="btn">Export</a> -->
 			</div>
@@ -536,20 +539,8 @@
 </div>
 <!-- move top -->
 
-<!-- Load Facebook SDK for JavaScript -->
-<!-- <div id="fb-root"></div>
-  <script>
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script> -->
-<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
-<script>
+<!-- <script>
   window.fbAsyncInit = function() {
     FB.init({
       xfbml            : true,
@@ -563,13 +554,42 @@
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+</script> -->
+<script>
+    
+	$("#sub_form").on('submit',(function(log){
+		var formdata = new FormData(this);
+        log.preventDefault();
+        $.ajax({
+            url: "<?php echo site_url('Home/addSubcribe'); ?>",
+            type: "POST",
+            data: formdata,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                // $(".loadings").hide()
+                if(data=="true"){                	
+					var popup = document.getElementById("myPopup1");
+					popup.classList.toggle("show");
+                }else{
+                	var popup = document.getElementById("myPopup2");
+					popup.classList.toggle("show");
+                }				
+            },
+            error: function () {
+            }
+        });
+	}));
+
+</script>
 
 <!-- Your customer chat code -->
-<div class="fb-customerchat"
+<!-- <div class="fb-customerchat"
   attribution=setup_tool
   page_id="1621330407923772"
   theme_color="#d3b673">
-</div>
+</div> -->
 </body>
 </html>

@@ -46,4 +46,18 @@ class Home extends CI_Controller
 
         $objWriter->save('php://output');   
     }
+
+    public function addSubcribe()
+    {
+        $email = $this->input->post('email_sub');
+
+        $exist = $this->Home_model->existEmailSub($email);
+        if($exist){
+            echo "fall";
+        }
+        else{
+            $this->Home_model->addSubcribe($email);
+            echo "true";
+        }
+    }
 }

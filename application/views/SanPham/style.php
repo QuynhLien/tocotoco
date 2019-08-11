@@ -142,6 +142,12 @@
         animation: fadeIn 1s;
     }
 
+    .popup_cart .hide {
+        visibility: visible;
+        -webkit-animation: fadeOut 1s;
+        animation: fadeOut 1s;
+    }
+
     /* Add animation (fade in the popup_cart) */
     @-webkit-keyframes fadeIn {
         from {
@@ -160,6 +166,25 @@
             opacity: 1;
         }
     }
+
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
     .pd-left0 {
         padding-left: 0 !important;
     }

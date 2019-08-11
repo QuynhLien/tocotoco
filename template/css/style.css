@@ -1382,3 +1382,92 @@ h3.tit_toco {
     transform: translateY(-50%);
     width: 33%;
 }
+.popup_sub {
+        position: relative;
+        display: inline-block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+/* The actual popup_sub */
+.popup_sub .popuptext1 {
+    visibility: hidden;
+    width: auto;
+    background-color: #d3b673;
+    color: #fff;
+    text-align: center;
+    /*border-radius: 6px;*/
+    padding: 10px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup_sub arrow */
+.popup_sub .popuptext1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #d3b673 transparent transparent transparent;
+}
+
+.popup_sub .popuptext2 {
+    visibility: hidden;
+    width: auto;
+    background-color: #d3b673;
+    color: #fff;
+    text-align: center;
+    /*border-radius: 6px;*/
+    padding: 10px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup_sub arrow */
+.popup_sub .popuptext2::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #d3b673 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup_sub */
+.popup_sub .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup_sub) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

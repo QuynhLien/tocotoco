@@ -14,10 +14,25 @@ class Home_model extends CI_Model
         return $query->result_array();
     }
 
-    public function addSubcribe()
+    public function addSubcribe($email)
     {
-    	$email = $this->input->post('email_sub');
-    	
+    	$array = array(
+		   'email' => $email ,
+		   'created_date' => date('Y-m-d H:i:s') ,
+		);
+		$this->db->insert('subcribes', $array); 
+    }
+
+    public function existEmailSub($email)
+    {
+    	$this->db->where('email',$email);
+	    $query = $this->db->get('subcribes');
+	    if ($query->num_rows() > 0){
+	        return true;
+	    }
+	    else{
+	        return false;
+	    }
     }
 }
 

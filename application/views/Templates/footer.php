@@ -41,6 +41,14 @@
     <!-- //copyright -->
 </footer>
 <!-- //footer -->
+<!-- move top -->
+<div class="move-top text-right">
+  <a href="#home" class="move-top">
+    <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+  </a>
+</div>
+<!-- move top -->
+
 <script src="<?php echo site_url(); ?>assets/javascript.js"></script>
 <div id="fb-root"></div>
 <script>
