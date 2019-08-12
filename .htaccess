@@ -1,29 +1,23 @@
 <IfModule mod_rewrite.c>
-Options -Indexes
-Options +FollowSymLinks
 
-# Set the default file for indexes
-DirectoryIndex index.php
+RewriteEngine On
 
-<IfModule mod_rewrite.c>
+#RewriteCond %{REQUEST_FILENAME} !-f
 
-# activate URL rewriting
-RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-d
 
-# do not rewrite links to the documentation, assets and public files (your folders here)
-RewriteCond $1 !^(images|assets|uploads|js)
+#RewriteRule ^(.*)$ index.php/$1 [L]
 
-# do not rewrite for php files in the document root, robots.txt or the maintenance page etc
-RewriteCond $1 !^([^\..]+\.php|robots\.txt|maintenance\.html)
 
-# rewrite everything else
-RewriteRule ^(.*)$ index.php/$1 [L]
-</IfModule>
 
-<IfModule !mod_rewrite.c>
+RewriteCond $1 !^(index\.php|public|\.txt)
 
-# If we don't have mod_rewrite installed, all 404's can be sent to index.php, and everything works as normal.
+RewriteCond %{REQUEST_FILENAME} !-f
 
-ErrorDocument 404 index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteRule ^(.*)$ index.php?$1
+
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
 
 </IfModule>

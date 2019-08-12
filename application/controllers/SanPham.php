@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class SanPham extends CI_Controller
+class San_Pham extends CI_Controller
 {
     function __construct()
     {

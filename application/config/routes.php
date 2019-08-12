@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'Home';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-$route['san-pham/(:any)'] = 'Sanpham/index/$1';
-$route['san-pham/(:any)/(:any)'] = 'Sanpham/index/$1/$2';
+$route['translate_uri_dashes'] = TRUE;
+$route['san-pham/(:any)'] = 'San_Pham/index/$1';
+$route['san-pham/(:any)/(:any)'] = 'San_Pham/index/$1/$2';
 $route['gio-hang'] = 'Giohang';
