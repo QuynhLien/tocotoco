@@ -16,6 +16,7 @@ class SanPham extends CI_Controller
     {
         $type = $this->uri->segment(2);
         $slug_prod = $this->uri->segment(3);
+        $idname_type = [];
         $idname_type = $this->SanPham_model->getIdAndNameType($type)[0];
         if ($slug_prod) {
             $template['page'] = 'SanPham/details';
