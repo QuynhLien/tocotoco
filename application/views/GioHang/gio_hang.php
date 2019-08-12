@@ -300,7 +300,7 @@
                 var cus_note = document.getElementById("cus_note").value;
 
                 $.ajax({                
-                    url: "<?= site_url('thanhtoan/paypal/success') ?>",
+                    url: "<?= site_url('ThanhToan/paypal/success') ?>",
                     type: "POST",
                     data: {id_items: id_items, quantity_items:quantity_items, cus_name:cus_name, cus_note:cus_note, cus_phone:cus_phone, cus_address:cus_address},
                     success: function (data) {
@@ -322,7 +322,7 @@
             var cus_note = document.getElementById("cus_note").value;
 
             $.ajax({                
-                url: "<?= site_url('thanhtoan/paypal/fail') ?>",
+                url: "<?= site_url('ThanhToan/paypal/fail') ?>",
                 type: "POST",
                 data: {id_items: id_items, quantity_items:quantity_items, cus_name:cus_name, cus_note:cus_note, cus_phone:cus_phone, cus_address:cus_address},
                 success: function (data) {

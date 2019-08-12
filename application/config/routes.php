@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['translate_uri_dashes'] = FALSE;
 $route['san-pham/(:any)'] = 'SanPham/index/$1';
 $route['san-pham/(:any)/(:any)'] = 'SanPham/index/$1/$2';
-$route['gio-hang'] = 'Giohang';
+$route['gio-hang'] = 'GioHang';
 
 
 
