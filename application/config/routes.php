@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-
+// Rewrite route to have url friendly and have to place this on top
 $route['translate_uri_dashes'] = FALSE;
 $route['san-pham/(:any)'] = 'SanPham/index/$1';
 $route['san-pham/(:any)/(:any)'] = 'SanPham/index/$1/$2';
