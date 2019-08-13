@@ -1,3 +1,19 @@
+<?php
+function getCurURL()
+{
+    if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") {
+        $pageURL = "https://";
+    } else {
+      $pageURL = 'http://';
+    }
+    if (isset($_SERVER["SERVER_PORT"]) && $_SERVER["SERVER_PORT"] != "80") {
+        $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+    } else {
+        $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+    }
+    return $pageURL;
+}
+?>
 <head>
     <title>MilkteaTEN - <?= $page_title?></title>
     
@@ -9,7 +25,7 @@
 
 <?php if($page_child2){?>
     <!-- Meta tag Keywords -->
-    <meta property="og:url" content="<?= base_url() ?>"/>
+    <meta property="og:url" content="<?= getCurURL() ?>"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="MilkteaTEN - <?php $type = $this->uri->segment(2);
 
