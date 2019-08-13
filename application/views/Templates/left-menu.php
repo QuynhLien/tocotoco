@@ -64,7 +64,7 @@
                 <h3 id="menu">Menu</h3>
                 <ul class="no-bullets menu-scroll" id="collection-sidebar"> 
                   <?php 
-                    $type = $this->uri->segment(3);
+                    $type = $this->uri->segment(2);
 
                     foreach ($menu as $value) { 
                       $active = "";
