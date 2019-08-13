@@ -2,7 +2,7 @@
 <html lang="eng">
 
 <head>
-	<title>Tocotoco - Trang chủ</title>
+	<title>MilkteaTEN - Trang chủ</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8"/>
@@ -10,12 +10,12 @@
 	<link rel="icon" href="<?php echo site_url(); ?>template/images/icon.png">
 
 	<!-- Meta tag Keywords -->
-	<meta property="og:url" content="http://www.localhost/tocotoco/"/>
+	<meta property="og:url" content="<?= site_url() ?>"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Tocotoco - Trà sữa"/>
+	<meta property="og:title" content="MilkteaTEN - Trà sữa"/>
 	<meta property="og:description"
-		  content="Với sứ mệnh mang tới niềm vui và hạnh phúc, TocoToco hy vọng sẽ tạo nên một nét văn hóa giải trí bên cạnh ly trà sữa Ngon – sạch – tươi."/>
-	<meta property="og:image" content="http://www.localhost/tocotoco/template/images/banner1.jpg"/>
+		  content="Với sứ mệnh mang tới niềm vui và hạnh phúc, MilkteaTEN hy vọng sẽ tạo nên một nét văn hóa giải trí bên cạnh ly trà sữa Ngon – sạch – tươi."/>
+	<meta property="og:image" content="<?= site_url('template/images/banner1.jpg') ?>"/>
 	<!-- //Meta tag Keywords -->
 
 	<!-- Custom-Files -->
