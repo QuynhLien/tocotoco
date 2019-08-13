@@ -50,22 +50,9 @@
 <!-- move top -->
 
 <script src="<?php echo site_url(); ?>assets/javascript.js"></script>
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v4.0'
-    });
-  };
-
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<?php if($page_child2){ ?>
+<script async src="https://platform-api.sharethis.com/js/sharethis.js#property=5d52ae7f4cd0540012f20160&product="sticky-share-buttons"></script>
+<?= } ?>
 
 <!-- Your customer chat code -->
 <div class="fb-customerchat"
