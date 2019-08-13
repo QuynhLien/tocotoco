@@ -23,7 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://tocotocomilktea.herokuapp.com/';//'http://localhost/tocotoco/';'https://milkteaten.000webhostapp.com/';
+$config['base_url'] = 'https://milkteaten.herokuapp.com/';
+// $config['base_url'] = 'http://localhost/tocotoco/';
+// $config['base_url'] = 'https://milkteaten.000webhostapp.com/';
 
 /*
 |--------------------------------------------------------------------------
