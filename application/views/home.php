@@ -497,8 +497,6 @@
 					<li class="my-2"><a href="#team">Business Team</a></li>
 					<li><a href="#contact">Support Helpline</a></li>
 					<li class="mt-2"><a href="#">Privacy Policy</a></li>
-					<li><div class="sharethis-inline-share-buttons"></div></li>
-                    <li><div class="fb-customerchat" page_id="<PAGE_ID>"></div></li>
 				</ul>
 			</div>
 			<div class="col-lg-4 col-sm-4">
@@ -534,7 +532,7 @@
 </div>
 <!-- move top -->
 
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5d528b734cd0540012f20106&product='inline-share-buttons' async='async'></script>
+<script async src="https://platform-api.sharethis.com/js/sharethis.js#property=5d52ae7f4cd0540012f20160&product="sticky-share-buttons"></script>
 <script>
     
 	$("#sub_form").on('submit',(function(log){
