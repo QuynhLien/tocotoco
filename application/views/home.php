@@ -124,12 +124,12 @@
 		</div>
 		<!-- banner-hny-info -->
 		<div class="banner-hny-info" style="text-align: center;">
-			<h3 id="banner_txt">ToCoToCo Tea</h3>
+			<h3 id="banner_txt">MilkteaTEN</h3>
 			<div class="slide-bold-text">
 				Trà sữa của hạnh phúc
 			</div>
 			<div class="slide-light-text">
-				Với sứ mệnh mang tới niềm vui và hạnh phúc, TocoToco hy vọng sẽ tạo nên một nét văn hóa giải trí<br> bên
+				Với sứ mệnh mang tới niềm vui và hạnh phúc, MilkteaTEN hy vọng sẽ tạo nên một nét văn hóa giải trí<br> bên
 				cạnh ly trà sữa Ngon – sạch – tươi.
 			</div>
 			<br>
@@ -147,7 +147,7 @@
 	<div class="container py-md-5 py-3">
 		<div style="text-align: center; margin-bottom: 10px;">
 			<h3 class="tit_toco">
-				ToCoToCo Menu
+				MilkteaTEN Menu
 			</h3>
 			<h2 id="h2_toco">Sản phẩm</h2>
 			<img src="template/images/home_line.png" style="margin: 7px 0;">
@@ -290,7 +290,7 @@
 	<div class="container py-md-5 py-3">
 		<div style="text-align: center; margin-bottom: 10px;">
 			<h3 class="tit_toco">
-				ToCoToCo Menu
+				MilkteaTEN Menu
 			</h3>
 			<h2 id="h2_toco">Sản phẩm nổi bật</h2>
 			<img src="template/images/home_line.png" style="margin: 7px 0;">
@@ -418,7 +418,7 @@
 	<div class="container py-md-5 py-3 text-center">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="mb-4 heading">KHÁM PHÁ TOCOTOCO NHẬN NGAY KHUYẾN MÃI</h2>
+				<h2 class="mb-4 heading">KHÁM PHÁ MilkteaTEN NHẬN NGAY KHUYẾN MÃI</h2>
 				<!-- <a href="#contact" class="btn mr-3"> Work With Us</a>
 				<a href="#portfolio" class="btn"> Projects </a> -->
 			</div>
@@ -438,7 +438,7 @@
 	<div class="container py-md-5 py-5">
 		<div style="text-align: center; margin-bottom: 10px;">
 			<h3 class="tit_toco">
-				Tocotoco Store
+				MilkteaTEN Store
 			</h3>
 			<h2 id="h2_toco">Không Gian Cửa Hàng</h2>
 			<img src="template/images/home_line.png" style="margin: 7px 0;">
@@ -517,7 +517,7 @@
 	<!-- copyright -->
 	<div class="container" style="padding: 20px 0px;">
 		<div class="row">
-			<div class="col-sm-7" style="color: whitesmoke">ToCoToCo - Thương hiệu trà sữa tiên phong sử dụng nguồn nông
+			<div class="col-sm-7" style="color: whitesmoke">MilkteaTEN - Thương hiệu trà sữa tiên phong sử dụng nguồn nông
 				sản Việt Nam
 			</div>
 			<div class="col-sm-5" style="color: whitesmoke">Copyrights © 2019 by QuynhLien. All rights reserved.</div>

@@ -33,7 +33,7 @@
 	<!-- copyright -->
 	<div class="container" style="padding: 20px 0px;">
 		<div class="row">
-			<div class="col-sm-7" style="color: whitesmoke">ToCoToCo - Thương hiệu trà sữa tiên phong sử dụng nguồn nông
+			<div class="col-sm-7" style="color: whitesmoke">MilkteaTEN - Thương hiệu trà sữa tiên phong sử dụng nguồn nông
 				sản Việt Nam
 			</div>
 			<div class="col-sm-5" style="color: whitesmoke">Copyrights © 2019 by QuynhLien. All rights reserved.</div>
