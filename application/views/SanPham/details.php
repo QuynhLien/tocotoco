@@ -40,6 +40,7 @@
 </section>
 
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5d528b734cd0540012f20106&product='inline-share-buttons' async='async'></script>
+
 <script>
     $("#btn-cart").click(function () {
         var amount = document.getElementById("amount").value;

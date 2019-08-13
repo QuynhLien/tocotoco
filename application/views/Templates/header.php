@@ -22,21 +22,10 @@
           content="<?= $data->content ?>"/>
     <meta property="og:image" content="<?= site_url() . $data->image ?>"/>
     <!-- //Meta tag Keywords -->
-
 <?php } ?>
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
-    <!-- <script>
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-
-    </script> -->
     
     <!-- Custom-Files -->
     <link rel="stylesheet" href="<?php echo site_url();?>template/css/bootstrap.css">
