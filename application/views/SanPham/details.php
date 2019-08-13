@@ -30,10 +30,6 @@
             <br>
             <p>Giao hàng tận nơi <span style="color: #d3b673; font-weight: bold;">08.5858.645 <i
                             class="fa fa-mobile-phone" style="font-size: 25px;"></i><span></p><br>
-            <!-- <div class="fb-share-button" data-href="http://localhost/tocotoco/" data-layout="button" data-size="small">
-                <a target="_blank"
-                   href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%2Ftocotoco%2F&amp;src=sdkpreparse"
-                   class="fb-xfbml-parse-ignore">Chia sẻ</a></div> -->
             <div class="sharethis-inline-share-buttons"></div>
         </div>
     </div>

@@ -497,12 +497,7 @@
 					<li class="my-2"><a href="#team">Business Team</a></li>
 					<li><a href="#contact">Support Helpline</a></li>
 					<li class="mt-2"><a href="#">Privacy Policy</a></li>
-					<li><!-- Your share button code -->
-						<div class="fb-share-button"
-							 data-href="http://www.localhost/tocotoco/"
-							 data-layout="button">
-						</div>
-					</li>
+					<li><div class="sharethis-inline-share-buttons"></div></li>
                     <li><div class="fb-customerchat" page_id="<PAGE_ID>"></div></li>
 				</ul>
 			</div>
@@ -539,23 +534,7 @@
 </div>
 <!-- move top -->
 
-<div id="fb-root"></div>
-<!-- <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v4.0'
-    });
-  };
-
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script> -->
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5d528b734cd0540012f20106&product='inline-share-buttons' async='async'></script>
 <script>
     
 	$("#sub_form").on('submit',(function(log){

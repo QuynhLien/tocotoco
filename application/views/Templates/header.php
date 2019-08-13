@@ -7,6 +7,7 @@
 
     <link rel="icon" href="<?php echo site_url();?>template/images/icon.png">
 
+<?php if($page_child2){?>
     <!-- Meta tag Keywords -->
     <meta property="og:url" content="<?= base_url() ?>"/>
     <meta property="og:type" content="website"/>
@@ -21,6 +22,8 @@
           content="<?= $data->content ?>"/>
     <meta property="og:image" content="<?= site_url() . $data->image ?>"/>
     <!-- //Meta tag Keywords -->
+
+<?php } ?>
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
