@@ -50,7 +50,7 @@
 <!-- move top -->
 
 <script src="<?php echo site_url(); ?>assets/javascript.js"></script>
-<?php if($page_child2){ ?>
+<?php if(!$page_child2){ ?>
 <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=5d52ae7f4cd0540012f20160&product="sticky-share-buttons"></script>
 <?php } ?>
 
