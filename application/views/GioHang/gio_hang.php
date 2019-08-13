@@ -153,6 +153,23 @@
         </div>
     </div>
 </div>
+
+<div id="paySuccessModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header title-cart">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 style="font-size: x-large; margin-bottom: 0px">Thanh toán đơn hàng</h3>
+            </div>
+            <div class="modal-body" style="padding: 15px 40px;">
+                <p>Thanh toán thành công</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="btn-success-modal" style="color: #333; border: 1px solid #ccc;" >OK</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- //Modal -->
 
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
@@ -305,8 +322,7 @@
                     data: {id_items: id_items, quantity_items:quantity_items, cus_name:cus_name, cus_note:cus_note, cus_phone:cus_phone, cus_address:cus_address},
                     success: function (data) {
                         $('#payModal').modal('hide');
-                        alert("Đặt hàng thành công!");
-                        window.location.reload();
+                        $('#paySuccessModal').modal('show');
                     },
                     error: function () {
                         alert("error_paypal_success");
@@ -336,5 +352,10 @@
         }
     }, '#paypal-button');
     //--Xử lý flow paypal--//
+
+    $("#btn-success-modal").on("click", function(){
+        // $("#paySuccessModal").modal('hide');
+        window.location.reload();
+    });
 
 </script>
