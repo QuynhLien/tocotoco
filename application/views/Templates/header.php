@@ -23,6 +23,11 @@ function getCurURL()
 
     <link rel="icon" href="<?php echo site_url();?>template/images/icon.png">
 
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="LcATbohM6_T9gX8qkHAISG8lmyWJvu870LG2j1mEveE" />
+    <!-- //Google Search Console -->
+
+
 <?php if($page_child2){ ?>
     <!-- Meta tag Facebook -->
     <meta property="og:url" content="<?= getCurURL() ?>"/>

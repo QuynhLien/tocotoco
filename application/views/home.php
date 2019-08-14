@@ -9,6 +9,11 @@
 
 	<link rel="icon" href="<?php echo site_url(); ?>template/images/icon.png">
 
+	<!-- Google Search Console -->
+	<meta name="google-site-verification" content="LcATbohM6_T9gX8qkHAISG8lmyWJvu870LG2j1mEveE" />
+	<!-- //Google Search Console -->
+
+
 	<!-- Meta tag Facebook -->
 	<meta property="og:url" content="<?= site_url() ?>"/>
 	<meta property="og:type" content="website"/>
@@ -16,7 +21,7 @@
 	<meta property="og:description"
 		  content="Với sứ mệnh mang tới niềm vui và hạnh phúc, MilkteaTEN hy vọng sẽ tạo nên một nét văn hóa giải trí bên cạnh ly trà sữa Ngon – sạch – tươi."/>
 	<meta property="og:image" content="<?= site_url('template/images/banner1.jpg') ?>"/>
-	<!-- Meta tag Facebook -->
+	<!-- //Meta tag Facebook -->
 
 
 	<!-- Meta tag Keywords -->
@@ -515,5 +520,17 @@ $("#sub_form").on('submit', (function (log) {
 	 page_id="111183013571051"
 	 theme_color="#d3b673">
 </div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145676775-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145676775-1');
+</script>
+<!-- //Global site tag (gtag.js) - Google Analytics -->
+
 </body>
 </html>
