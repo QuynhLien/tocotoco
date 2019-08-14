@@ -9,13 +9,19 @@
 
 	<link rel="icon" href="<?php echo site_url(); ?>template/images/icon.png">
 
-	<!-- Meta tag Keywords -->
+	<!-- Meta tag Facebook -->
 	<meta property="og:url" content="<?= site_url() ?>"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:title" content="MilkteaTEN - Trà sữa"/>
 	<meta property="og:description"
 		  content="Với sứ mệnh mang tới niềm vui và hạnh phúc, MilkteaTEN hy vọng sẽ tạo nên một nét văn hóa giải trí bên cạnh ly trà sữa Ngon – sạch – tươi."/>
 	<meta property="og:image" content="<?= site_url('template/images/banner1.jpg') ?>"/>
+	<!-- Meta tag Facebook -->
+
+
+	<!-- Meta tag Keywords -->
+	<meta name="keywords" content="MilkteaTEN"/>
+	<meta name="description" content="Với sứ mệnh mang tới niềm vui và hạnh phúc, MilkteaTEN hy vọng sẽ tạo nên một nét văn hóa giải trí bên cạnh ly trà sữa Ngon – sạch – tươi."/>
 	<!-- //Meta tag Keywords -->
 
 	<!-- Custom-Files -->
@@ -124,7 +130,7 @@
 		</div>
 		<!-- banner-hny-info -->
 		<div class="banner-hny-info" style="text-align: center;">
-			<h3 id="banner_txt">MilkteaTEN</h3>
+			<h1 id="banner_txt">MilkteaTEN</h1>
 			<div class="slide-bold-text">
 				Trà sữa của hạnh phúc
 			</div>
