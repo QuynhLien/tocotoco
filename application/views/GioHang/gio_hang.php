@@ -5,7 +5,7 @@
 	<div class="content-w3ls-inn px-lg-5">
 		<div class="container py-md-5 py-3">
 			<div class="row title-cart">
-				<h3>Giỏ hàng</h3>
+				<h1>Giỏ hàng</h1> <!-- h3 -->
 			</div>
 			<div class="row">
 				<?php if ($data) { ?>
@@ -22,8 +22,8 @@
 							?>
 							<tr id="row-<?= $value['id'] ?>">
 								<td class="btn-del" onclick="btn_del(<?= $value['id'] ?>)">x</td>
-								<td><img src="<?= site_url() . $value['image'] ?>" style="width: 90px"></td>
-								<td><strong style="text-transform: capitalize;"><?= $value['name_prod'] ?></strong>
+								<td><img src="<?= site_url() . $value['image'] ?>" style="width: 90px" alt="<?= $value['alt_img'] ?>" title="<?= $value['title_img'] ?>"></td>
+								<td><h2><strong style="text-transform: capitalize;"><?= $value['name_prod'] ?></strong></h2>
 								</td>
 								<td><?= number_format($value['price']) ?>đ</td>
 								<td class="quantity">

@@ -7,7 +7,7 @@
 <div class="col-lg-9" style="padding: 0; margin-left: -20px">
     <div class="row">
         <div class="col-md-6" style="padding: 0">
-            <img src="<?= site_url() . $data->image ?>" id="img-detail">
+            <img src="<?= site_url() . $data->image ?>" id="img-detail" alt="<?= $data->alt_img ?>" title="<?= $data->title_img ?>">
         </div>
         <div class="col-md-6" style="padding-left: 40px; padding-right: 0;">
             <h3 id="title-detail"><?= $data->name_prod ?></h3><br>

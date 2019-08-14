@@ -56,7 +56,7 @@
 			<nav class="wthree-w3ls">
 				<div id="logo">
 					<h1><a class="navbar-brand px-0 mx-0" href="<?= site_url() ?>"><img
-								src="template/images/logo.png">
+								src="template/images/logo.png" alt="MilkteaTEN" title="MilkteaTEN">
 						</a>
 					</h1>
 				</div>
@@ -163,95 +163,13 @@
 				<div class="col-md-3 col-6">
 					<a href="<?php echo site_url() . 'san-pham/' . $value->slug; ?>">
 						<img src="<?= $value->image ?>" class="img-circle"
-							 style="height: 50%; border: 5px solid #d3b673; border-radius: 50%;">
+							 style="height: 50%; border: 5px solid #d3b673; border-radius: 50%;" alt="<?= $value->alt_img ?>" title="<?= $value->title_img ?>">
 						<h3 id="h2_toco"
 						   style="font-size: 140%; margin-top: 20px; font-style: oblique;text-decoration: underline; letter-spacing: 7px;     font-weight: normal;"><?= $value->name_type ?></h3>
 					</a>
 				</div>
 			<?php } ?>
-		</div>
-		<!-- portfolio popups -->
-		<!-- popup-->
-		<div id="gal1" class="pop-overlay animate">
-			<div class="popup">
-				<img src="template/images/g1.jpg" alt="Popup Image" class="img-fluid"/>
-				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-					dolor.</p>
-				<a class="close" href="#portfolio">&times;</a>
-			</div>
-		</div>
-		<!-- //popup -->
-		<!-- popup-->
-		<div id="gal2" class="pop-overlay animate">
-			<div class="popup">
-				<img src="template/images/g2.jpg" alt="Popup Image" class="img-fluid"/>
-				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-					dolor.</p>
-				<a class="close" href="#portfolio">&times;</a>
-			</div>
-		</div>
-		<!-- //popup -->
-		<!-- popup-->
-		<div id="gal3" class="pop-overlay animate">
-			<div class="popup">
-				<img src="template/images/g3.jpg" alt="Popup Image" class="img-fluid"/>
-				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-					dolor.</p>
-				<a class="close" href="#portfolio">&times;</a>
-			</div>
-		</div>
-		<!-- //popup3 -->
-		<!-- popup-->
-		<div id="gal4" class="pop-overlay animate">
-			<div class="popup">
-				<img src="template/images/g4.jpg" alt="Popup Image" class="img-fluid"/>
-				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-					dolor.</p>
-				<a class="close" href="#portfolio">&times;</a>
-			</div>
-		</div>
-		<!-- //popup -->
-		<!-- popup-->
-		<div id="gal5" class="pop-overlay animate">
-			<div class="popup">
-				<img src="template/images/g5.jpg" alt="Popup Image" class="img-fluid"/>
-				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-					dolor.</p>
-				<a class="close" href="#portfolio">&times;</a>
-			</div>
-		</div>
-		<!-- //popup -->
-		<!-- popup-->
-		<div id="gal6" class="pop-overlay animate">
-			<div class="popup">
-				<img src="template/images/g6.jpg" alt="Popup Image" class="img-fluid"/>
-				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-					dolor.</p>
-				<a class="close" href="#portfolio">&times;</a>
-			</div>
-		</div>
-		<!-- //popup -->
-		<!-- popup-->
-		<div id="gal7" class="pop-overlay animate">
-			<div class="popup">
-				<img src="template/images/g7.jpg" alt="Popup Image" class="img-fluid"/>
-				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-					dolor.</p>
-				<a class="close" href="#portfolio">&times;</a>
-			</div>
-		</div>
-		<!-- //popup -->
-		<!-- popup-->
-		<div id="gal8" class="pop-overlay animate">
-			<div class="popup">
-				<img src="template/images/g8.jpg" alt="Popup Image" class="img-fluid"/>
-				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
-					dolor.</p>
-				<a class="close" href="#portfolio">&times;</a>
-			</div>
-		</div>
-		<!-- //popup -->
-		<!-- //portfolio popups -->
+		</div>		
 	</div>
 </section>
 <!-- //portfolio -->
@@ -268,13 +186,13 @@
 		</div>
 		<div class="row pricing-plans">
 			<div class="col-md-4 price-main text-center mb-4">
-				<a href="#"><img src="template/images/new-1.jpg"></a>
+				<a href="#"><img src="template/images/new-1.jpg" alt="Trà sữa royal tea là gì" title="Trà sữa royal tea là gì"></a>
 			</div>
 			<div class="col-md-4 price-main text-center mb-4">
-				<a href="#"><img src="template/images/new-2.jpg"></a>
+				<a href="#"><img src="template/images/new-2.jpg" alt="Đến đâu để thưởng thức royal tea" title="Đến đâu để thưởng thức royal tea"></a>
 			</div>
 			<div class="col-md-4 price-main text-center mb-4">
-				<a href="#"><img src="template/images/new-3.jpg"></a>
+				<a href="#"><img src="template/images/new-3.jpg" alt="Royal tea đang Hot nhất?" title="Royal tea đang Hot nhất?"></a>
 			</div>
 		</div>
 	</div>

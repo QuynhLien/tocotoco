@@ -19,7 +19,7 @@
                     <div class="product-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                         <div class="product-img">
                             <a href="<?= site_url()."san-pham/".$data[0]->slug_type."/".$value->slug ?>">
-                                <img src="<?= site_url().$value->image ?>">
+                                <img src="<?= site_url().$value->image ?>" alt="<?= $value->alt_img ?>" title="<?= $value->title_img ?>">
                             </a>
                             <div class="product-tags1">
 

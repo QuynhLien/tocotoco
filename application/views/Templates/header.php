@@ -24,7 +24,7 @@ function getCurURL()
     <link rel="icon" href="<?php echo site_url();?>template/images/icon.png">
 
 <?php if($page_child2){ ?>
-    <!-- Meta tag Keywords -->
+    <!-- Meta tag Facebook -->
     <meta property="og:url" content="<?= getCurURL() ?>"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="MilkteaTEN - <?php $type = $this->uri->segment(2);
@@ -37,17 +37,23 @@ function getCurURL()
     <meta property="og:description"
           content="<?= $data->content ?>"/>
     <meta property="og:image" content="<?= site_url() . $data->image ?>"/>
-    <!-- //Meta tag Keywords -->
+    <!-- //Meta tag Facebook -->
 <?php }else{ ?>
-    <!-- Meta tag Keywords -->
+    <!-- Meta tag Facebook -->
     <meta property="og:url" content="<?= site_url() ?>"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="MilkteaTEN - Trà sữa"/>
     <meta property="og:description"
           content="Với sứ mệnh mang tới niềm vui và hạnh phúc, MilkteaTEN hy vọng sẽ tạo nên một nét văn hóa giải trí bên cạnh ly trà sữa Ngon – sạch – tươi."/>
     <meta property="og:image" content="<?= site_url('template/images/banner1.jpg') ?>"/>
-    <!-- //Meta tag Keywords -->
+    <!-- //Meta tag Facebook -->
 <?php } ?>
+
+    <!-- Meta tag Keywords -->
+    <meta name="keywords" content="MilkteaTEN"/>
+    <meta name="description" content="Với sứ mệnh mang tới niềm vui và hạnh phúc, MilkteaTEN hy vọng sẽ tạo nên một nét văn hóa giải trí bên cạnh ly trà sữa Ngon – sạch – tươi."/>
+    <!-- //Meta tag Keywords -->
+
     <script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
     
