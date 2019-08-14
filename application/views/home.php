@@ -152,10 +152,10 @@
 		 style="margin-bottom: -50px;padding-bottom: 0px !important; height: 700px">
 	<div class="container py-md-5 py-3">
 		<div style="text-align: center; margin-bottom: 10px;">
-			<h3 class="tit_toco">
+			<h2 class="tit_toco">
 				MilkteaTEN Menu
-			</h3>
-			<h2 id="h2_toco">Sản phẩm</h2>
+			</h2>
+			<h3 id="h2_toco">Sản phẩm</h3>
 			<img src="template/images/home_line.png" style="margin: 7px 0;">
 		</div>
 		<div class="row news-grids text-center">
@@ -164,8 +164,8 @@
 					<a href="<?php echo site_url() . 'san-pham/' . $value->slug; ?>">
 						<img src="<?= $value->image ?>" class="img-circle"
 							 style="height: 50%; border: 5px solid #d3b673; border-radius: 50%;">
-						<p id="h2_toco"
-						   style="font-size: 140%; margin-top: 20px; font-style: oblique;text-decoration: underline; letter-spacing: 7px"><?= $value->name_type ?></p>
+						<h3 id="h2_toco"
+						   style="font-size: 140%; margin-top: 20px; font-style: oblique;text-decoration: underline; letter-spacing: 7px;     font-weight: normal;"><?= $value->name_type ?></h3>
 					</a>
 				</div>
 			<?php } ?>
@@ -443,10 +443,10 @@
 <section class="contact py-5" id="contact">
 	<div class="container py-md-5 py-5">
 		<div style="text-align: center; margin-bottom: 10px;">
-			<h3 class="tit_toco">
+			<h2 class="tit_toco">
 				MilkteaTEN Store
-			</h3>
-			<h2 id="h2_toco">Không Gian Cửa Hàng</h2>
+			</h2>
+			<h3 id="h2_toco">Không Gian Cửa Hàng</h3>
 			<img src="template/images/home_line.png" style="margin: 7px 0;">
 		</div>
 		<div class="row contact_information">

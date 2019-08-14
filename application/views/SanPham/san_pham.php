@@ -7,7 +7,7 @@
     <div class="blog-single-item" id="collections1">
         <div class="section-title" style="margin-bottom: 20px;">
             <div class="title">
-                <h4><?=$data[0]->name_type?></h4>
+                <h1><?=$data[0]->h1?></h1>
             </div>
         </div>
         <div class="blog-single-slider grid-uniform">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-title">
-                                <a href="<?= site_url()."san-pham/".$data[0]->slug_type."/".$value->slug ?>"><?= $value->name_prod ?></a>
+                                <a href="<?= site_url()."san-pham/".$data[0]->slug_type."/".$value->slug ?>"><h2><?= $value->name_prod ?></h2></a>
                             </div>
                             <div class="product-price clearfix">
                                 <span class="current-price"><?= number_format($value->price) ?>₫</span>

@@ -33,6 +33,10 @@
             <div class="sharethis-inline-share-buttons"></div>
         </div>
     </div>
+    <div class="row">
+        <h2><?= $data->h2 ?></h2>
+        <p><?= $data->content ?></p>
+    </div>
 </div>
 </div>
 </div>

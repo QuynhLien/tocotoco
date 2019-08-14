@@ -16,7 +16,7 @@ class SanPham_model extends CI_Model
 
     public function getAllByIdType($id_type)
     {
-        $query = $this->db->select('product.*, type.name_type, type.slug as slug_type')->from('product')->join('type', 'type.id = product.id_type')->where('product.id_type', $id_type)->get();
+        $query = $this->db->select('product.*, type.h1, type.name_type, type.slug as slug_type')->from('product')->join('type', 'type.id = product.id_type')->where('product.id_type', $id_type)->get();
         return $query->result();
     }
 
