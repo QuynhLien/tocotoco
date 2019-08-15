@@ -17,7 +17,11 @@
     input:focus {
         border: none;
     }
-    .title-cart h3 {
+    .table>tbody>tr>td {
+        vertical-align: middle;
+    }
+
+    .title-cart h1 {
         font-size: 38px;
         letter-spacing: 1.4px;
         color: #d3b673;
@@ -111,18 +115,5 @@
 
     .btn-pay:active {
         background: none;
-    }
-
-    /*.btn-minus-cart {
-        position: absolute;
-        top: 40%;
-        bottom: 40%;
-        width: 20px;
-    }
-
-    .btn-plus-cart {
-        padding: 2.5px;
-        top: -1px;
-        position: inherit;*/
     }
 </style>

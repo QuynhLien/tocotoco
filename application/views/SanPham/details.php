@@ -12,7 +12,7 @@
         <div class="col-md-6" style="padding-left: 40px; padding-right: 0;">
             <h3 id="title-detail"><?= $data->name_prod ?></h3><br>
             <h4 id="price-detail"><?= number_format($data->price) ?>đ</h4><br><br>
-            <p><?= $data->content ?></p><br>
+            <p><?= $data->description ?></p><br>
             <div class="row">
                 <div class="col-md-4 quantity">
                     <button id="btn-quantity" class="btn-plus"><i class="fa fa-plus"></i></button>
@@ -33,11 +33,21 @@
             <div class="sharethis-inline-share-buttons"></div>
         </div>
     </div>
-    <div class="row">
-        <h2><?= $data->h2 ?></h2>
-        <p><?= $data->content ?></p>
-    </div>
 </div>
+</div>
+<br><hr>
+<div class="row">
+    <div class="col-md-12">
+        <?php
+            $arr_h2 = explode("#",$data->h2);
+            $arr_content = explode("#",$data->content);
+            $amount = count($arr_h2);
+            for ($i=0; $i < $amount ; $i++) { ?>    
+                <br><br>
+                <h2 id="price-detail"><strong><?= $arr_h2[$i] ?></strong></h2><br>
+                <p><?= $arr_content[$i] ?></p>
+        <?php } ?>
+    </div>
 </div>
 </div>
 </div>

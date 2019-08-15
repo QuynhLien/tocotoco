@@ -167,15 +167,17 @@ nav a:hover {
 	color: #fff;
 }
 
-/* Hide Dropdowns by Default
- * and giving it a position of absolute */
 nav ul ul {
-	display: none;
-	position: absolute; 
-	/* has to be the same number as the "line-height" of "nav a" */
-	top: 30px; 
+    display: none;
+    position: absolute;
+    top: 25px;
+    padding: 10px;
     background: #fff;
     padding: 10px;
+    z-index: 999;
+    border: 1px solid #ddd;
+    /*left: 165px;*/
+    text-align: left;
 }
 	
 /* Display Dropdowns on Hover */

@@ -10,6 +10,7 @@ class GioHang extends CI_Controller
         $this->load->library('session');
 
         $this->load->model('GioHang_model');
+        $this->load->model('SanPham_model');
     }
 
     public function index()
@@ -21,6 +22,7 @@ class GioHang extends CI_Controller
         $template['page_child2'] = "";
         $template['menu'] = "";
         $template['data'] = "";
+        $template['sp'] = $this->SanPham_model->getMenu();;
 
         $session = $this->session->userdata();
         if($session) {

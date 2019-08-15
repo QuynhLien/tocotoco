@@ -24,6 +24,7 @@ class SanPham extends CI_Controller
             $template['page_parent'] = "Sản phẩm";
             $template['page_child1'] = $idname_type->name_type;
             $template['menu'] = $this->SanPham_model->getMenu();
+            $template['sp'] = $template['menu'];
             $template['data'] = $this->SanPham_model->getProd($slug_prod)[0];
             $template['page_child2'] = $template['data']->name_prod;
             $this->load->view('template', $template);
@@ -34,6 +35,7 @@ class SanPham extends CI_Controller
             $template['page_child1'] = $idname_type->name_type;
             $template['page_child2'] = "";
             $template['menu'] = $this->SanPham_model->getMenu();
+            $template['sp'] = $template['menu'];
             $template['data'] = $this->SanPham_model->getAllByIdType($idname_type->id);
             $this->load->view('template', $template);
         }

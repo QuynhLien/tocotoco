@@ -178,7 +178,7 @@
 	    padding: 10px;
 	    z-index: 999;
 	    border: 1px solid #ddd;
-	    left: 165px;
+	    /*left: 165px;*/
 	    text-align: left;
 	}
 

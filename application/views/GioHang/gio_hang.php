@@ -5,7 +5,7 @@
 	<div class="content-w3ls-inn px-lg-5">
 		<div class="container py-md-5 py-3">
 			<div class="row title-cart">
-				<h1>Giỏ hàng</h1> <!-- h3 -->
+				<h1>Giỏ hàng</h1>
 			</div>
 			<div class="row">
 				<?php if ($data) { ?>
@@ -23,7 +23,7 @@
 							<tr id="row-<?= $value['id'] ?>">
 								<td class="btn-del" onclick="btn_del(<?= $value['id'] ?>)">x</td>
 								<td><img src="<?= site_url() . $value['image'] ?>" style="width: 90px" alt="<?= $value['alt_img'] ?>" title="<?= $value['title_img'] ?>"></td>
-								<td><h2><strong style="text-transform: capitalize;"><?= $value['name_prod'] ?></strong></h2>
+								<td><h2 style="text-transform: capitalize; font-size: medium;"><?= $value['name_prod'] ?></h2>
 								</td>
 								<td><?= number_format($value['price']) ?>đ</td>
 								<td class="quantity">
@@ -58,7 +58,7 @@
 							<td></td>
 							<td></td>
 							<td class="total"><img src="<?= site_url('template/images/icon-glass-tea.png') ?>"
-												   style="width: 30px"> <span
+												   style="width: 30px" alt="icon-glass-tea"> <span
 									style="color: black">&nbsp;x&nbsp;</span>
 								<span id="total_amount"><?= $amount ?></span><span
 									style="color: black">&nbsp; = &nbsp;</span><span
@@ -93,7 +93,7 @@
 		<div class="modal-content">
 			<div class="modal-header title-cart">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h3 style="font-size: x-large; margin-bottom: 0px">Thông tin người nhận</h3>
+				<h1 style="font-size: x-large; margin-bottom: 0px">Thông tin người nhận</h1>
 			</div>
 			<div class="modal-body" style="padding: 15px 40px;">
 				<form method="post">

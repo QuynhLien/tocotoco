@@ -71,9 +71,19 @@
 				<ul class="menu mr-auto">
 					<li class="active"><a href="<?= site_url() ?>">Trang Chủ</a></li>
 					<li><a href="about.html">Giới Thiệu</a></li>
-					<li><a href="<?= site_url('san-pham/che') ?>">Sản Phẩm</a></li>
+					<li>
+                        <!-- First Tier Drop Down -->
+                        <label for="drop-2" class="toggle toggle-2">Sản Phẩm <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                        <a href="#">Sản Phẩm  <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                        <input type="checkbox" id="drop-2">
+                        <ul>
+                        	<?php foreach ($data as $value) { ?>
+                        		<li><a href="<?= site_url('san-pham/').$value->slug ?>" class="drop-text"><?= $value->name_type ?></a></li>
+                        	<?php } ?>
+                        </ul>
+                    </li>
 					<li><a href="contact.html">Liên Hệ</a></li>
-					<li><a href="<?= site_url('gio-hang') ?>">Giỏ Hàng</a></li>
+					<li><a href="<?= site_url('gio-hang') ?>">Giỏ Hàng</a></li>					
 
 					<li class="social-icons ml-lg-3"><a href="#" class="p-0 social-icon"><span
 								class="fa fa-facebook-official" aria-hidden="true"></span>

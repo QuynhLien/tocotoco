@@ -1,5 +1,5 @@
 <style type="text/css">
-    .section-title h4 {
+    .section-title h1 {
         font-size: 28px;
         letter-spacing: 1.4px;
         color: #282828;
@@ -256,11 +256,12 @@
         transform: translateY(0);
     }
 
-    .product-item .product-info .product-title a {
+    .product-item .product-info .product-title a h2 {
         color: black;
         display: inline-block;
         height: 48px;
         text-transform: uppercase;
+        font-size: medium;
     }
 
     .product-item .product-info .product-price {

@@ -550,23 +550,6 @@ li.social-icons a span {
     color: #feac00;
 }
 
-/* Hide Dropdowns by Default
- * and giving it a position of absolute */
-
-nav ul ul {
-    display: none;
-    position: absolute;
-    /* has to be the same number as the "line-height" of "nav a" */
-    top: 25px;
-    padding: 10px;
-    background: #fff;
-    padding: 10px;
-    z-index: 999;
-    border: 1px solid #ddd;
-    left: 165px;
-    text-align: left;
-}
-
 /* Display Dropdowns on Hover */
 
 nav ul li:hover>ul {
@@ -2811,23 +2794,6 @@ li.social-icons a span {
 
 .menu li.active a {
     color: #feac00;
-}
-
-/* Hide Dropdowns by Default
- * and giving it a position of absolute */
-
-nav ul ul {
-    display: none;
-    position: absolute;
-    /* has to be the same number as the "line-height" of "nav a" */
-    top: 25px;
-    padding: 10px;
-    background: #fff;
-    padding: 10px;
-    z-index: 999;
-    border: 1px solid #ddd;
-    left: 165px;
-    text-align: left;
 }
 
 /* Display Dropdowns on Hover */
