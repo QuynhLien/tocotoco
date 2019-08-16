@@ -426,9 +426,7 @@
 	<div class="container">
 		<div class="row footer-grids">
 			<div class="col-lg-5 col-sm-5 mb-lg-0 mb-sm-5 mb-4">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6350041.310790406!2d30.68773492426509!3d39.0014851732576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b0155c964f2671%3A0x40d9dbd42a625f2a!2sTurkey!5e0!3m2!1sen!2sin!4v1522753415269"
-					style="height: 300px; width: 100%"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6511106447847!2d106.6800142147143!3d10.761348962414681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1b888ab357%3A0xc469f6e800231314!2zMjgwIEFuIETGsMahbmcgVsawxqFuZywgUGjGsOG7nW5nIDQsIFF14bqtbiA1LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1565952663686!5m2!1svi!2s" frameborder="0" style="border:0;height: 300px; width: 100%" allowfullscreen></iframe>
 			</div>
 			<div class="col-lg-1 col-sm-1"></div>
 			<div class="col-lg-2 col-sm-2 mb-lg-0 mb-sm-5 mb-4">
