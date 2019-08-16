@@ -1,4 +1,10 @@
 <style type="text/css">
+    .slick-prev:before,
+    .slick-next:before
+    {
+        color: #d3b673 !important;
+    }
+
     .section-title h1 {
         font-size: 28px;
         letter-spacing: 1.4px;

@@ -193,10 +193,10 @@
 <section class="plans-sec py-5" id="plans">
 	<div class="container py-md-5 py-3">
 		<div style="text-align: center; margin-bottom: 10px;">
-			<h3 class="tit_toco">
+			<h2 class="tit_toco">
 				Tin tức và Khuyến mãi
-			</h3>
-			<h2 id="h2_toco">New Feeds</h2>
+			</h2>
+			<h3 id="h2_toco">New Feeds</h3>
 			<img src="template/images/home_line.png" style="margin: 7px 0;">
 		</div>
 		<div class="row pricing-plans">
@@ -228,10 +228,10 @@
 	<div style="height: 100%; position: absolute; width: 100%; background: rgb(1,1,1,0.1);"></div>
 	<div class="container py-md-5 py-3">
 		<div style="text-align: center; margin-bottom: 10px;">
-			<h3 class="tit_toco">
+			<h2 class="tit_toco">
 				MilkteaTEN Menu
-			</h3>
-			<h2 id="h2_toco">Sản phẩm nổi bật</h2>
+			</h2>
+			<h3 id="h2_toco">Sản phẩm nổi bật</h3>
 			<img src="template/images/home_line.png" style="margin: 7px 0;">
 		</div>
 		<div class="row team-grid">

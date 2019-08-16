@@ -25,6 +25,14 @@ class SanPham_model extends CI_Model
         $query = $this->db->select('*')->from('product')->where('slug', $slug_prod)->get();
         return $query->result();
     }
+
+    public function getProdRandom($id_type, $slug)
+    {
+        $this->db->where(['id_type' => $id_type, 'slug !=' => $slug]);
+        $this->db->order_by('rand()');
+        $query = $this->db->get('product');
+        return $query->result();
+    }
 }
 
 ?>

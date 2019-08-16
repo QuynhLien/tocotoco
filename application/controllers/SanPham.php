@@ -27,6 +27,7 @@ class SanPham extends CI_Controller
             $template['sp'] = $template['menu'];
             $template['data'] = $this->SanPham_model->getProd($slug_prod)[0];
             $template['page_child2'] = $template['data']->name_prod;
+            $template['same'] = $this->SanPham_model->getProdRandom($template['data']->id_type, $template['data']->slug);
             $this->load->view('template', $template);
         } else {
             $template['page'] = 'SanPham/san_pham';

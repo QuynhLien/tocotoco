@@ -41,7 +41,7 @@
         <?php
             $arr_h2 = explode("#",$data->h2);
             $arr_content = explode("#",$data->content);
-            $amount = count($arr_h2);
+            $amount = count($arr_h2) - 1;
             for ($i=0; $i < $amount ; $i++) { ?>    
                 <br><br>
                 <h2 id="price-detail"><strong><?= $arr_h2[$i] ?></strong></h2><br>
@@ -53,9 +53,77 @@
 </div>
 </section>
 
+<!-- portfolio -->
+<section class="portfolio py-5" id="portfolio"
+         style="padding-top: 0px !important;">
+    <div class="container py-md-5 py-3 blog-single-item"id="collections1">
+        <div style="text-align: center; margin-bottom: 10px;">
+            <h2 class="tit_toco">
+                MilkteaTEN Menu
+            </h2>
+            <h3 id="h2_toco">Có thể bạn thích</h3>
+            <img src="<?= site_url('template/images/home_line.png') ?>" style="margin: 7px 0;">
+        </div>
+        <div class="blog-single-slider grid-uniform">
+
+            <div class="grid_item pd-left0 slider" id="owl-collection-single-slider1-c">
+            <?php foreach ($same as $value) { ?>
+                <div class="grid__item large--one-third medium--one-half small--one-half">
+                
+                    <div class="product-item wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="product-img">
+                            <a href="<?= site_url()."san-pham/".$this->uri->segment(2)."/".$value->slug ?>">
+                                <img src="<?= site_url().$value->image ?>" alt="<?= $value->alt_img ?>" title="<?= $value->title_img ?>">
+                            </a>
+                            <div class="product-tags1">
+
+                            </div>
+                            <div class="product-tags">
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-title">
+                                <a href="<?= site_url()."san-pham/".$this->uri->segment(2)."/".$value->slug ?>"><h2><?= $value->name_prod ?></h2></a>
+                            </div>
+                            <div class="product-price clearfix">
+                                <span class="current-price"><?= number_format($value->price) ?>₫</span>
+
+                            </div>
+                            <div class="product-actions text-center clearfix">
+                                <div>
+                                    <button type="button" class="btn-buyNow medium--hide small--hide">
+                                        <a href="#">
+                                            Đặt ngay
+                                        </a>
+                                    </button>
+                                    <button type="button" class="btn-quickview medium--hide small--hide"><a
+                                                href="<?= site_url()."san-pham/".$this->uri->segment(2)."/".$value->slug ?>">Xem
+                                            chi tiết</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+
+        </div>     
+    </div>
+</section>
+<!-- //portfolio -->
+
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5d528b734cd0540012f20106&product='inline-share-buttons' async='async'></script>
 
 <script>
+    $("#owl-collection-single-slider1-c").slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+    });
+
     $("#btn-cart").click(function () {
         var amount = document.getElementById("amount").value;
         amount = parseInt(amount);

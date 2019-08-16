@@ -64,12 +64,18 @@ function getCurURL()
     
     <!-- Custom-Files -->
     <link rel="stylesheet" href="<?php echo site_url();?>template/css/bootstrap.css">
-    <!-- Bootstrap-Core-CSS -->
     <link rel="stylesheet" href="<?php echo site_url();?>template/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<?php echo site_url();?>template/css/slick.css">
+    <link rel="stylesheet" href="<?php echo site_url();?>template/css/slick-theme.css">
+    <script src="<?php echo site_url();?>template/css/slick.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script> -->
     <!-- Style-CSS -->
+
     <!-- font-awesome-icons -->
     <link href="<?php echo site_url();?>template/css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i" rel="stylesheet">
