@@ -127,7 +127,9 @@
 							<div id="paypal-button"></div>
 						</div>
 						<div class="col-md-4">
-							<button data-dismiss="modal">OnePay</button>
+							<button type='submit' class="btn-pay"
+                                    style="background: #e4b629 !important; padding: 2px 40px; font-size: unset; color: white"data-dismiss="modal">One Pay
+                            </button>
 						</div>
 					</div>
                     <br>
@@ -142,7 +144,7 @@
         <div class="modal-content">
             <div class="modal-header title-cart">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 style="font-size: x-large; margin-bottom: 0px">Thanh toán đơn hàng</h3>
+                <h1 style="font-size: x-large; margin-bottom: 0px">Thanh toán đơn hàng</h1>
             </div>
             <div class="modal-body" style="padding: 15px 40px;">
                 <p>Thanh toán thất bại</p>
@@ -159,7 +161,7 @@
         <div class="modal-content">
             <div class="modal-header title-cart">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 style="font-size: x-large; margin-bottom: 0px">Thanh toán đơn hàng</h3>
+                <h1 style="font-size: x-large; margin-bottom: 0px">Thanh toán đơn hàng</h1>
             </div>
             <div class="modal-body" style="padding: 15px 40px;">
                 <p>Thanh toán thành công</p>
@@ -273,7 +275,8 @@
         // Configure environment
         env: 'sandbox',
         client: {
-            sandbox: 'AYPW2M49qNiMNmK8GqJGxMsVLL8dGHgt7bcTJ6802DQzdmLZesxZ6sR_nY1QKWZeq3N42ZWws9YExab3'
+            // sandbox: 'AYPW2M49qNiMNmK8GqJGxMsVLL8dGHgt7bcTJ6802DQzdmLZesxZ6sR_nY1QKWZeq3N42ZWws9YExab3'
+            sandbox: 'AXuXJZRUxrttcLFg7FnUPMgASJmffVbhXN-JMFLpcjlcp1k3boay-Us9uhgVjXWuQkd7eqZ2FLqSEVQC'
         },
         // Customize button (optional)
         locale: 'en_US',

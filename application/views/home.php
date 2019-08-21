@@ -175,7 +175,7 @@
 		</div>
 		<div class="row news-grids text-center">
 			<?php foreach ($data as $value) { ?>
-				<div class="col-md-3 col-6">
+				<div class="col-md-3 col-sm-6">
 					<a href="<?php echo site_url() . 'san-pham/' . $value->slug; ?>">
 						<img src="<?= $value->image ?>" class="img-circle"
 							 style="height: 50%; border: 5px solid #d3b673; border-radius: 50%;" alt="<?= $value->alt_img ?>" title="<?= $value->title_img ?>">
