@@ -6,13 +6,7 @@ class Home_model extends CI_Model
     {
         $query = $this->db->query("SELECT * FROM type");
         return $query->result();
-    }
-
-    public function getSubcribes()
-    {
-    	$query = $this->db->get('subcribes');
-        return $query->result_array();
-    }
+    }    
 
     public function addSubcribe($email)
     {

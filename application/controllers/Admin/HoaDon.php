@@ -8,6 +8,10 @@ class HoaDon extends CI_Controller
         parent::__construct();
 
         $this->load->model('Admin/HoaDon_model');
+
+        if(!$this->session->userdata('logged_in')) {
+            redirect(site_url('admin/signin'));
+        }
     }
 
     public function index()

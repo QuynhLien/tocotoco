@@ -1,30 +1,6 @@
 <?php
-	$segment = $this->uri->segment(2);
-	$active = [];
-	$active = array_fill(0,10,"");
-	switch ($segment) {
-		case 'menu':
-			$active[1] = "active";
-			break;
-    case 'san-pham':
-      $active[2] = "active";
-      break;
-		case 'don-hang':
-      $active[3] = "active";
-      break;
-    case 'hoa-don':
-      $active[4] = "active";
-      break;
-    case 'khuyen-mai':
-      $active[5] = "active";
-      break;
-    case 'cua-hang':
-      $active[6] = "active";
-      break;
-		default:
-			$active[0] = "active";
-			break;
-	}
+	$segment_2 = $this->uri->segment(2);
+	$segment_3 = $this->uri->segment(3);
 
   $acount = $this->session->userdata('logged_in');
   if(!isset($acount['img']))
@@ -34,7 +10,10 @@
 <style type="text/css">
   .nav-ul-style {
     background: #494e53 !important;
-    padding-left: 20px !important;
+  }
+  [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link {
+    color: #c2c7d0;
+    padding-left: 40px;
   }
 </style>
 
@@ -65,7 +44,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview">
-            <a href="<?= site_url('admin') ?>" class="nav-link <?= $active[0] ?>">
+            <a href="<?= site_url('admin') ?>" class="nav-link <?php if($segment_2 == "") echo "active"; ?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -73,7 +52,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= site_url('admin/menu') ?>" class="nav-link <?= $active[1] ?>">
+            <a href="<?= site_url('admin/menu') ?>" class="nav-link <?php if($segment_2 == "menu") echo "active"; ?>">
               <i class="nav-icon fas fa-bars"></i>
               <p>
                 Menu
@@ -81,7 +60,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= site_url('admin/san-pham') ?>" class="nav-link <?= $active[2] ?>">
+            <a href="<?= site_url('admin/san-pham') ?>" class="nav-link <?php if($segment_2 == "san-pham") echo "active"; ?>">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Sản phẩm
@@ -89,7 +68,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= site_url('admin/don-hang') ?>" class="nav-link <?= $active[3] ?>">
+            <a href="<?= site_url('admin/don-hang') ?>" class="nav-link <?php if($segment_2 == "don-hang") echo "active"; ?>">
               <i class="nav-icon fas fa-file-invoice-dollar"></i>
               <p>
                 Đơn hàng
@@ -97,23 +76,38 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= site_url('admin/hoa-don') ?>" class="nav-link <?= $active[4] ?>">
+            <a href="<?= site_url('admin/hoa-don') ?>" class="nav-link <?php if($segment_2 == "hoa-don") echo "active"; ?>">
               <i class="nav-icon fas fa-receipt"></i>
               <p>
                 Hóa đơn
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="<?= site_url('admin/khuyen-mai') ?>" class="nav-link <?= $active[5] ?>">
+          <li class="nav-item <?php if($segment_2 == "khuyen-mai") echo "menu-open"; ?>">
+            <a class="nav-link <?php if($segment_2 == "khuyen-mai") echo "active"; ?>">
               <i class="nav-icon fas fa-percent"></i>
               <p>
                 Khuyến mãi
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview nav-ul-style">
+              <li class="nav-item">
+                <a href="<?= site_url('admin/khuyen-mai/dang-tin') ?>" class="nav-link <?php if($segment_3 == "dang-tin") echo "active"; ?>">
+                  <i class="fas fa-newspaper nav-icon"></i>
+                  <p>Đăng tin</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= site_url('admin/khuyen-mai/thong-bao') ?>" class="nav-link  <?php if($segment_3 == "thong-bao") echo "active"; ?>">
+                  <i class="fas fa-envelope-open-text nav-icon"></i>
+                  <p>Thông báo</p>
+                </a>
+              </li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="<?= site_url('admin/cua-hang') ?>" class="nav-link <?= $active[6] ?>">
+          <li class="nav-item <?php if($segment_2 == "cua-hang") echo "menu-open"; ?>">
+            <a class="nav-link <?php if($segment_2 == "cua-hang") echo "active"; ?>">
               <i class="nav-icon fas fa-store"></i>
               <p>
                 Cửa hàng
@@ -122,19 +116,19 @@
             </a>
             <ul class="nav nav-treeview nav-ul-style">
               <li class="nav-item">
-                <a href="<?= site_url('adTpl') ?>/pages/charts/chartjs.html" class="nav-link">
+                <a href="<?= site_url('admin/cua-hang/gioi-thieu') ?>" class="nav-link <?php if($segment_3 == "gioi-thieu") echo "active"; ?>">
                   <i class="fas fa-newspaper nav-icon"></i>
                   <p>Giới thiệu</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= site_url('adTpl') ?>/pages/charts/flot.html" class="nav-link">
+                <a href="<?= site_url('admin/cua-hang/lien-he') ?>" class="nav-link <?php if($segment_3 == "lien-he") echo "active"; ?>">
                   <i class="fas fa-phone-alt nav-icon"></i>
                   <p>Liên hệ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= site_url('adTpl') ?>/pages/charts/inline.html" class="nav-link">
+                <a href="<?= site_url('admin/cua-hang/hinh-anh') ?>" class="nav-link <?php if($segment_3 == "hinh-anh") echo "active"; ?>">
                   <i class="fas fa-images nav-icon"></i>
                   <p>Hình ảnh</p>
                 </a>
@@ -151,7 +145,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link <?= $active[1] ?>">
+            <a href="#" class="nav-link <?php if($segment_2 == "") echo "active"; ?>">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Layout Options

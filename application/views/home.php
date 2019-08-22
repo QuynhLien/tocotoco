@@ -446,7 +446,6 @@
 					<button type="submit" class="btn popup_sub">Subscribe<span class="popuptext1" id="myPopup1">Đăng ký nhận tin thành công!</span><span
 							class="popuptext2" id="myPopup2">Email này đã đăng ký nhận tin!</span></button>
 				</form>
-				<!-- <a href="<?= site_url('home/createXLS') ?>" class="btn">Export</a> -->
 			</div>
 		</div>
 	</div>
