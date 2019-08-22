@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <?php $this->load->view('Admin/template/header') ?>
+  <?php $this->load->view('Admin/Template/header') ?>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Navbar -->
-  <?php $this->load->view('Admin/template/navbar') ?>
+  <?php $this->load->view('Admin/Template/navbar') ?>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <?php $this->load->view('Admin/template/sidebar') ?>
+  <?php $this->load->view('Admin/Template/sidebar') ?>
   <!-- /Main Sidebar Container -->
 
   <!-- Breadcrumb Content Wrapper. Contains page content -->
-    <?php $this->load->view('Admin/template/breadcum') ?>
+    <?php $this->load->view('Admin/Template/breadcum') ?>
     <!-- /.Breadcrumb content-header -->
 
     <!-- Main content -->
@@ -44,7 +44,7 @@
 <!-- ./wrapper -->
 
 <!-- Footer js -->
-<?php $this->load->view('Admin/template/footer_js') ?>
+<?php $this->load->view('Admin/Template/footer_js') ?>
 <!-- /Footer js -->
 
 </body>
