@@ -27,60 +27,57 @@ class Menu extends CI_Controller
 	{
 		$name = $this->input->post('name');
 		$slug = $this->input->post('slug');
-		// $file = $this->input->post('file');
+		$file = $_FILES["file"]["name"];
+
+		$message = [];
+		$data["type"] = "message_img";
 
 		$target_dir = "template/images/menu/";
 		$target_file = $target_dir . basename($_FILES["file"]["name"]);
 		$uploadOk = 1;
 		$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
 		// Check if image file is a actual image or fake image
-		// if (isset($_POST["submit"])) {
-			$check = getimagesize($_FILES["file"]["tmp_name"]);
-			if ($check !== false) {
-				// echo "File is an image - " . $check["mime"] . ".";
-    //             $this->session->set_flashdata('message_img', array('message' => 'Sorry, your file was not uploaded.', 'class' => 'danger'));
-				$uploadOk = 1;
-			} else {
-				// echo "File is not an image.";
-                $this->session->set_flashdata('message_img', array('message' => 'File is not an image.', 'class' => 'danger'));
-				$uploadOk = 0;
-			}
-		// }
+		$check = getimagesize($_FILES["file"]["tmp_name"]);
+		if ($check !== false) {
+			$uploadOk = 1;
+		} else {
+			$array = ["message" => "File is not an image.", "class" => "danger"];
+			array_push($message, $array);
+			$uploadOk = 0;
+		}
 		// Check if file already exists
 		if (file_exists($target_file)) {
-			// echo "Sorry, file already exists.";
-            $this->session->set_flashdata('message_img', array('message' => 'Sorry, file already exists.', 'class' => 'danger'));
+			$array = ["message" => "Sorry, file already exists.", "class" => "danger"];
+			array_push($message, $array);
 			$uploadOk = 0;
 		}
 		// Check file size
 		if ($_FILES["file"]["size"] > 500000) {
-			// echo "Sorry, your file is too large.";
-            $this->session->set_flashdata('message_img', array('message' => 'Sorry, your file is too large.', 'class' => 'danger'));
+			$array = ["message" => "Sorry, your file is too large.", "class" => "danger"];
+			array_push($message, $array);
 			$uploadOk = 0;
 		}
 		// Allow certain file formats
 		if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"/* && $imageFileType != "gif" */) {
-			// echo "Sorry, only JPG, JPEG, & PNG files are allowed.";
-            $this->session->set_flashdata('message_img', array('message' => 'Sorry, only JPG, JPEG, & PNG files are allowed.', 'class' => 'danger'));
+			$array = ["message" => "Sorry, only JPG, JPEG, & PNG files are allowed.", "class" => "danger"];
+			array_push($message, $array);
 			$uploadOk = 0;
 		}
 		// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 1) {
-			// echo "Sorry, your file was not uploaded.";
-            // $this->session->set_flashdata('message', array('message' => 'Sorry, your file was not uploaded.', 'class' => 'danger'));
-			// if everything is ok, try to upload file
-		// } else {
 			if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-				// echo "The file " . basename($_FILES["file"]["name"]) . " has been uploaded.";                
-                $this->Menu_model->addMenu($name, $slug, $file);
-                $this->session->set_flashdata('message', array('message' => 'Thêm menu ' . $name . ' thành công!', 'class' => 'success'));
+				$this->Menu_model->addMenu($name, $slug, $file);
+				$message = ["message" => "Thêm menu '" . $name . "' thành công!", "class" => "success"];
+				$data["type"] = "message";
 			} else {
-				// echo "Sorry, there was an error uploading your file.";
-                $this->session->set_flashdata('message', array('message' => 'Sorry, there was an error uploading your file.', 'class' => 'danger'));
+				$message = ["message" => "Sorry, there was an error uploading your file.", "class" => "danger"];
+				$data["type"] = "message";
 			}
 		}
 
-		// redirect('admin/menu');
+		$data["message"] = $message;
+		echo json_encode($data);
 	}
 
 }

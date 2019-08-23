@@ -12,7 +12,7 @@ class Menu_model extends CI_Model
 	{
 		$array = array(
 		   'name_type' => $name ,
-		   'image' => 'template/images/'.$file ,
+		   'image' => 'template/images/menu/'.$file ,
 		   'slug' => $slug ,
 		   'h1' => 'Tổng hợp các loại '.strtolower($name) ,
 		   'alt_img' => $name ,

@@ -35,7 +35,11 @@
 <!-- DataTables -->
 <script src="<?= site_url('adTpl') ?>/plugins/datatables/jquery.dataTables.js"></script>
 <script src="<?= site_url('adTpl') ?>/plugins/datatables/dataTables.bootstrap4.js"></script>
+<!-- SweetAlert2 -->
+<link rel="stylesheet" href="<?= site_url('adTpl') ?>/plugins/sweetalert2/sweetalert2.min.css">
+<script src="<?= site_url('adTpl') ?>/plugins/sweetalert2/sweetalert2.min.js"></script>
 <!--Style custome-->
 <style type="text/css">
 	.table.table-bordered.dataTable tbody td {vertical-align: middle;}
+	.alert {padding: 0.45rem 1.25rem;}
 </style>

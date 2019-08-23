@@ -1,23 +1,9 @@
-<?php
-if ($this->session->flashdata('message')) {
-	$message = $this->session->flashdata('message');
-	?>
-
-	<div class="alert alert-<?php echo $message['class']; ?>">
-		<button class="close" data-dismiss="alert" type="button">×</button>
-		<?php echo $message['message']; ?>
-	</div>
-
-	<?php
-}
-?>
-
 <!-- remove this if you use Modernizr -->
 <script>(function (e, t, n) {
         var r = e.querySelectorAll("html")[0];
         r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2")
     })(document, window, 0);</script>
-
+<div id="message"></div>
 <div class="card card-info card-add" style="display: none">
 	<div class="card-header">
 		<div class="row">
@@ -54,8 +40,7 @@ if ($this->session->flashdata('message')) {
 									</svg>
 									Choose a file&hellip;</strong></label>
 						</div>
-						<br>
-						<?php
+						<!-- <?php
 						if ($this->session->flashdata('message_img')) {
 							$message = $this->session->flashdata('message_img');
               foreach ($message['class'] as $value) {
@@ -67,9 +52,11 @@ if ($this->session->flashdata('message')) {
                 <?php
               }
 						}
-						?>
+						?> -->
 					</div>
 				</div>
+        <br>
+        <div id="message-img"></div>
 			</div>
 		</div>
 		<!-- /.card-body -->
@@ -147,6 +134,12 @@ if ($this->session->flashdata('message')) {
             $(".card-view").show();
         });
     });
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
     $("#form-menu").submit(function (log) {
       var formdata = new FormData(this);
       log.preventDefault();
@@ -158,9 +151,27 @@ if ($this->session->flashdata('message')) {
           cache: false,
           processData: false,
           success: function (data) {
-              if(data == "success"){
-
+            obj = JSON.parse(data);
+            if(obj.type == "message"){
+              message = obj.message;
+              if(message['class'] == "success"){
+                Toast.fire({
+                  type: 'success',
+                  title: message['message']
+                })
+              }else{
+                Toast.fire({
+                  type: 'error',
+                  title: message['message']
+                })
               }
+            }else if(obj.type == "message_img"){
+              message = obj.message;
+              for (i in message) {
+                $("#message-img").append('<div class="alert alert-'+message[i]['class']+'"><button class="close" data-dismiss="alert" type="button">×</button>'+message[i]['message']+'</div>');
+              }
+
+            }
           },
           error: function () {
           }
