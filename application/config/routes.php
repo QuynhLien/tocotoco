@@ -11,6 +11,7 @@ $route['gio-hang'] = 'GioHang';
 $route['admin'] = 'Admin/Dashboard';
 $route['admin/index'] = 'Admin/Dashboard/index';
 $route['admin/signin'] = 'Admin/Signin';
+$route['admin/menu'] = 'Admin/Menu';
 $route['admin/menu/(:any)'] = 'Admin/Menu/$1';
 $route['admin/san-pham'] = 'Admin/SanPham';
 $route['admin/don-hang'] = 'Admin/DonHang';
