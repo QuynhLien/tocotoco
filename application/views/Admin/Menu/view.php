@@ -1,71 +1,8 @@
-<!-- remove this if you use Modernizr -->
-<script>(function (e, t, n) {
-        var r = e.querySelectorAll("html")[0];
-        r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2")
-    })(document, window, 0);</script>
-<div id="message"></div>
-<div class="card card-info card-add" style="display: none">
-	<div class="card-header">
-		<div class="row">
-			<div class="col-md-10"><h3 class="card-title">Thêm Menu</h3></div>
-			<div class="col-md-2" style="text-align: right;">
-				<button type="button" class="btn btn-block btn-default btn-sm" id="btn-view-menu">Quay lại&nbsp;&nbsp;<i
-						class="fas fa-arrow-right"></i></button>
-			</div>
-		</div>
-	</div>
-	<!-- /.card-header -->
-	<!-- form start -->
-	<form role="form" id="form-menu" method="post" enctype="multipart/form-data">
-		<div class="card-body">
-			<div class="form-group">
-				<label for="exampleInputEmail1">Tên menu</label>
-				<input type="text" class="form-control" name="name" placeholder="Enter menu">
-			</div>
-			<div class="form-group">
-				<label for="exampleInputPassword1">Slug</label>
-				<input type="text" class="form-control" name="slug" placeholder="Enter slug">
-			</div>
-			<div class="form-group">
-				<label for="exampleInputFile">File image</label>
-				<div class="input-group">
-					<div class="custom-file">
-						<div class="box">
-							<input type="file" name="file" id="file-7" class="inputfile inputfile-6"
-								   data-multiple-caption="{count} files selected" multiple/>
-							<label for="file-7"><span></span> <strong>
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
-										<path
-											d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/>
-									</svg>
-									Choose a file&hellip;</strong></label>
-						</div>
-						<!-- <?php
-						if ($this->session->flashdata('message_img')) {
-							$message = $this->session->flashdata('message_img');
-              foreach ($message['class'] as $value) {
-                ?>
-  							<div class="alert alert-<?php echo $value; ?>">
-  								<button class="close" data-dismiss="alert" type="button">×</button>
-  								<?php echo $value; ?>
-  							</div>
-                <?php
-              }
-						}
-						?> -->
-					</div>
-				</div>
-        <br>
-        <div id="message-img"></div>
-			</div>
-		</div>
-		<!-- /.card-body -->
+<!-- Add Menu -->
+<?php $this->load->view('Admin/Menu/add') ?>
 
-		<div class="card-footer">
-			<button type="submit" class="btn btn-info" name="submit">Submit</button>
-		</div>
-	</form>
-</div>
+<!-- Edit Menu -->
+<?php $this->load->view('Admin/Menu/edit') ?>
 
 <!-- view-table-menu -->
 <div class="card card-view">
@@ -101,8 +38,8 @@
 					<td><?= $value->slug ?></td>
 					<td><img src="<?= site_url($value->image) ?>" style="height: 80px"></td>
 					<td>
-						<button type="button" class="btn btn-block btn-outline-success btn-sm">Sửa</button>
-						<button type="button" class="btn btn-block btn-outline-warning btn-sm">Xoá</button>
+						<button type="button" class="btn btn-block btn-outline-success btn-sm" onclick="btn_edit_menu(<?=$value->id?>,'<?=$value->name_type?>','<?=$value->slug?>','<?=$value->image?>')">Sửa</button>
+						<button type="button" class="btn btn-block btn-outline-warning btn-sm" id="btn-del-menu">Xoá</button>
 					</td>
 				</tr>
 			<?php } ?>
@@ -129,11 +66,28 @@
             $(".card-add").show();
         });
     });
-    $("#btn-view-menu").click(function () {
+    $("#btn-add-view-menu").click(function () {
         $(".card-add").toggle(function () {
             $(".card-view").show();
         });
     });
+    $("#btn-edit-view-menu").click(function () {
+        $(".card-edit").toggle(function () {
+            $(".card-view").show();
+        });
+    });
+    var image_view;
+    function btn_edit_menu(id,name_type,slug,image) {
+      $(".card-view").toggle(function () {
+          $(".card-edit").show();
+      });
+      document.getElementById("name_menu").value = name_type;
+      document.getElementById("slug_menu").value = slug;
+      document.getElementById("img_menu").innerHTML = image;
+      document.getElementById("id_menu").value = id;
+      image_view = image;
+    }
+
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -171,6 +125,52 @@
                 $("#message-img").append('<div class="alert alert-'+message[i]['class']+'"><button class="close" data-dismiss="alert" type="button">×</button>'+message[i]['message']+'</div>');
               }
 
+            }
+          },
+          error: function () {
+          }
+      });
+    });
+    $("#form-menu-edit").submit(function (log) {
+      img_menu = document.getElementById("img_menu").innerHTML;
+      if(img_menu == image_view) edit_img = "false"; else edit_img = "true";
+      var formdata = new FormData(this);
+      formdata.append('edit_img', edit_img);
+      log.preventDefault();
+      $.ajax({
+          url: "<?php echo site_url('admin/menu/editMenu'); ?>",
+          type: "POST",
+          data: formdata,
+          contentType: false,
+          cache: false,
+          processData: false,
+          success: function (data) {
+            if (data != "success") {
+              obj = JSON.parse(data);
+              if(obj.type == "message"){
+                message = obj.message;
+                if(message['class'] == "success"){
+                  Toast.fire({
+                    type: 'success',
+                    title: message['message']
+                  })
+                }else{
+                  Toast.fire({
+                    type: 'error',
+                    title: message['message']
+                  })
+                }
+              }else if(obj.type == "message_img"){
+                message = obj.message;
+                for (i in message) {
+                  $("#message-img-edit").append('<div class="alert alert-'+message[i]['class']+'"><button class="close" data-dismiss="alert" type="button">×</button>'+message[i]['message']+'</div>');
+                }
+              }
+            }else{
+              Toast.fire({
+                type: 'success',
+                title: 'Chỉnh sửa menu thành công!'
+              })
             }
           },
           error: function () {

@@ -22,9 +22,10 @@
 			<div class="col-lg-4 col-sm-4">
 				<h4 class="mb-4" style="color:  #d3b673;">Subscribe Us</h4>
 				<p class="mb-3" style="color: whitesmoke">Subscribe to our newsletter</p>
-				<form action="#" method="post" class="d-flex">
-					<input type="email" id="email" name="EMAIL" placeholder="Enter your email here" required="">
-					<button type="submit" class="btn">Subscribe</button>
+				<form id="sub_form" class="d-flex">
+					<input type="email" id="email" name="email_sub" placeholder="Enter your email here" required="">
+					<button type="submit" class="btn popup_sub">Subscribe<span class="popuptext1" id="myPopup1">Đăng ký nhận tin thành công!</span><span
+							class="popuptext2" id="myPopup2">Email này đã đăng ký nhận tin!</span></button>
 				</form>
 			</div>
 		</div>
@@ -78,5 +79,29 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-145676775-1');
+  $("#sub_form").on('submit', (function (log) {
+    var formdata = new FormData(this);
+    log.preventDefault();
+    $.ajax({
+        url: "<?php echo site_url('Home/addSubcribe'); ?>",
+        type: "POST",
+        data: formdata,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+            // $(".loadings").hide()
+            if (data == "true") {
+                var popup = document.getElementById("myPopup1");
+                popup.classList.toggle("show");
+            } else {
+                var popup = document.getElementById("myPopup2");
+                popup.classList.toggle("show");
+            }
+        },
+        error: function () {
+        }
+    });
+}));
 </script>
 <!-- //Global site tag (gtag.js) - Google Analytics -->

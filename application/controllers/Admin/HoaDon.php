@@ -23,4 +23,16 @@ class HoaDon extends CI_Controller
         $this->load->view('Admin/template', $template);
     }
 
+    public function view()
+    {
+        $id = $this->input->post('id');
+        $data = $this->HoaDon_model->detailById($id)[0];
+        echo json_encode($data);
+    }
+
+    public function delete()
+    {
+        $id = $this->input->post('id');
+        $this->HoaDon_model->deleteById($id);
+    }
 }

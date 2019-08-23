@@ -16,6 +16,7 @@ $route['admin/menu/(:any)'] = 'Admin/Menu/$1';
 $route['admin/san-pham'] = 'Admin/SanPham';
 $route['admin/don-hang'] = 'Admin/DonHang';
 $route['admin/hoa-don'] = 'Admin/HoaDon';
+$route['admin/hoa-don/(:any)'] = 'Admin/HoaDon/$1';
 $route['admin/khuyen-mai/thong-bao'] = 'Admin/KhuyenMai/thongBao';
 $route['admin/khuyen-mai/(:any)'] = 'Admin/KhuyenMai/$1';
 

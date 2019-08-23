@@ -20,6 +20,30 @@ class Menu_model extends CI_Model
 		);
 		$this->db->insert('type', $array); 
 	}
+
+	public function editMenu($name, $slug, $id, $file="")
+	{
+		if($file){
+			$array = array(
+				'name_type' => $name ,		   
+				'slug' => $slug ,
+				'h1' => 'Tổng hợp các loại '.strtolower($name) ,
+				'alt_img' => $name ,
+				'title_img' => $name ,		
+				'image' => 'template/images/menu/'.$file
+			);
+		}else{
+			$array = array(
+			   'name_type' => $name ,		   
+			   'slug' => $slug ,
+			   'h1' => 'Tổng hợp các loại '.strtolower($name) ,
+			   'alt_img' => $name ,
+			   'title_img' => $name				
+			);
+		}
+		
+		$this->db->update('type', $array, 'id='.$id); 
+	}
 }
 
 ?>
