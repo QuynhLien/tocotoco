@@ -1,8 +1,3 @@
-<style type="text/css">
-	.table.table-bordered.dataTable tbody td {
-	    vertical-align: middle;
-	}
-</style>
 <div class="card">
 	<!-- <div class="card-header">
 	  <h3 class="card-title">DataTable with default features</h3>
@@ -52,11 +47,6 @@
 	</div>
 	<!-- /.card-body -->
 </div>
-
-
-<!-- DataTables -->
-<script src="<?= site_url('adTpl') ?>/plugins/datatables/jquery.dataTables.js"></script>
-<script src="<?= site_url('adTpl') ?>/plugins/datatables/dataTables.bootstrap4.js"></script>
 
 <script>
     $("#example1").DataTable();

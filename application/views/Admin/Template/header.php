@@ -24,9 +24,18 @@
 <link rel="stylesheet" href="<?= site_url('adTpl') ?>/plugins/summernote/summernote-bs4.css">
 <!-- Google Font: Source Sans Pro -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<!--Input file style-->
+<link rel="stylesheet" type="text/css" href="<?= site_url('template') ?>/css/component.css" />
 <!-- jQuery -->
 <script src="<?= site_url('adTpl') ?>/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="<?= site_url('adTpl') ?>/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- DataTables -->
 <link rel="stylesheet" href="<?= site_url('adTpl')?>/plugins/datatables/dataTables.bootstrap4.css">
+<!-- DataTables -->
+<script src="<?= site_url('adTpl') ?>/plugins/datatables/jquery.dataTables.js"></script>
+<script src="<?= site_url('adTpl') ?>/plugins/datatables/dataTables.bootstrap4.js"></script>
+<!--Style custome-->
+<style type="text/css">
+	.table.table-bordered.dataTable tbody td {vertical-align: middle;}
+</style>

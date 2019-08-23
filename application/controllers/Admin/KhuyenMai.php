@@ -26,7 +26,7 @@ class KhuyenMai extends CI_Controller
     // create xlsx
     public function createXLS() {
         // load excel library
-        $this->load->library('excel');
+        $this->load->library('Excel');
         $objPHPExcel = new PHPExcel();
         $objPHPExcel->setActiveSheetIndex(0);
 

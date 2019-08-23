@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
   <?php $this->load->view('Admin/Template/header') ?>
 </head>
@@ -46,6 +46,5 @@
 <!-- Footer js -->
 <?php $this->load->view('Admin/Template/footer_js') ?>
 <!-- /Footer js -->
-
 </body>
 </html>

@@ -43,11 +43,6 @@
 	<!-- /.card-body -->
 </div>
 
-
-<!-- DataTables -->
-<script src="<?= site_url('adTpl') ?>/plugins/datatables/jquery.dataTables.js"></script>
-<script src="<?= site_url('adTpl') ?>/plugins/datatables/dataTables.bootstrap4.js"></script>
-
 <script>
     $("#example1").DataTable();
     // $('#example2').DataTable({
