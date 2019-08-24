@@ -275,8 +275,8 @@
         // Configure environment
         env: 'sandbox',
         client: {
-            // sandbox: 'AYPW2M49qNiMNmK8GqJGxMsVLL8dGHgt7bcTJ6802DQzdmLZesxZ6sR_nY1QKWZeq3N42ZWws9YExab3'
-            sandbox: 'AXuXJZRUxrttcLFg7FnUPMgASJmffVbhXN-JMFLpcjlcp1k3boay-Us9uhgVjXWuQkd7eqZ2FLqSEVQC'
+            sandbox: 'AYPW2M49qNiMNmK8GqJGxMsVLL8dGHgt7bcTJ6802DQzdmLZesxZ6sR_nY1QKWZeq3N42ZWws9YExab3'
+            // sandbox: 'AXuXJZRUxrttcLFg7FnUPMgASJmffVbhXN-JMFLpcjlcp1k3boay-Us9uhgVjXWuQkd7eqZ2FLqSEVQC'
         },
         // Customize button (optional)
         locale: 'en_US',

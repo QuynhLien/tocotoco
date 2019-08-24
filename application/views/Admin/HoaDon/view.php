@@ -156,7 +156,6 @@
     }
     function del_hoadon(id) {
     	document.getElementById("id_del").value = id;
-    	// $("#delModal").show();
     }
     function btn_yes() {
     	$("#delModal").hide();
