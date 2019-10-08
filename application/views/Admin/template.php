@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <?php $this->load->view('Admin/Template/header') ?>
 </head>

@@ -32,3 +32,9 @@
 <script src="<?= site_url('adTpl') ?>/dist/js/demo.js"></script>
 <!-- Input file js -->
 <script src="<?= site_url('template') ?>/css/custom-file-input.js"></script>
+
+
+    <div id="result"></div>
+
+    <!-- The Google API Loader script. -->
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></s -->
