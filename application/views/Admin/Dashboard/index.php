@@ -12,13 +12,16 @@
 
 <script type="text/javascript">
 	function printFile(fileId) {
-	  var request = gapi.client.drive.files.get({
-	    'fileId': fileId
-	  });
-	  request.execute(function(resp) {
-	    console.log('Title: ' + resp.title);
-	    console.log('Description: ' + resp.description);
-	    console.log('MIME type: ' + resp.mimeType);
-	  });
+		gapi.client.load('drive', 'v2', null);
+		  gapi.load('client', function () {
+		    gapi.client.load('drive', 'v2', function () {
+		        var file = gapi.client.drive.files.get({ 'fileId': fileId });
+		        file.execute(function (resp) {
+		            console.log(resp);
+		        });
+
+		    });
+		});
 	}
+
 </script>
